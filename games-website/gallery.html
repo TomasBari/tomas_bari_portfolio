@@ -1,0 +1,443 @@
+<!-- games-website/gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAME CHASERS - Gallery</title>
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ✅ Saját CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gallery-page">
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container d-flex align-items-center justify-content-between">
+      
+            <!-- Logó és cím -->
+            <div class="d-flex align-items-center">
+              <img src="images/logo/game-chasers-logo.png" alt="Game Chasers Logo" class="logo-img me-2" style="height: 60px;">
+              <span class="site-title mb-0">GAME CHASERS</span>
+            </div>
+      
+            <!-- Hamburger gomb mobilra -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <!-- Navigációs menü -->
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reviews.html">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+              </ul>
+            </div>
+      
+          </div>
+        </nav>
+      </header>
+
+  <main class="container mt-4">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+
+    <h2 class="mb-5">Gallery</h2>
+    <p class="mb-5">Welcome to the Game Gallery!
+        Explore a curated collection of stunning visuals from some of the most exciting games.
+         Here you'll find brief highlights and key details about each title, offering a quick glimpse into their unique worlds.
+          Dive in and discover your next favorite adventure!</p>
+
+    <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- 🔽 Game 1 -->
+        <div class="carousel-item active">
+          <a href="game-pages/split-fiction.html" class="img-container">
+            <img src="images/split-fiction.jpg" class="d-block mx-auto img-fluid" alt="Game 1" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Split Fiction</div>
+              </a>
+                <h5>Split Fiction</h5>
+                <p>Split Fiction is a 2025 action-adventure game developed by Hazelight Studios and published by Electronic Arts. 
+                    As a cooperative multiplayer-only game, it follows authors Mio Hudson and Zoe Foster after they become
+                     imprisoned in the world of their stories when they are connected to a machine designed to steal creative ideas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 2 -->
+        <div class="carousel-item">
+          <a href="game-pages/clair-obscur-expedition-33.html" class="img-container">
+            <img src="images/expedition-33.jpg" class="d-block mx-auto img-fluid" alt="Game 2" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Clair Obscur <br> Expedition 33</div>
+              </a>
+                <h5>Clair Obscur <br> Expedition 33</h5>
+                <p>Clair Obscur: Expedition 33[a] is a 2025 turn-based role-playing video game developed by French studio Sandfall Interactive and published by Kepler Interactive. 
+                    Taking place in a dark fantasy Belle Époque setting, the game follows the volunteers of Expedition 33 as they set out to destroy the Paintress, a being causing
+                     the yearly Gommage, which erases those at or above an ever-decreasing age. Played from a third-person perspective, the player controls a party of characters, exploring areas and engaging in combat. Coupled to its turn-based mechanics are real-time aspects such as quick time events and timed actions in combat.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 3 -->
+        <div class="carousel-item">
+          <a href="/games-website/game-pages/assassins-creed-shadows.html" class="img-container">
+            <img src="images/ac-shadows.jpg" class="d-block mx-auto img-fluid" alt="Game 3" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Assassin's Creed <br> Shadows</div>
+              </a>
+                <h5>Assassin's Creed <br> SHADOWS</h5>
+                <p>Assassin's Creed Shadows is a 2025 action-adventure game developed by Ubisoft Quebec and published by Ubisoft.
+                     The game is the fourteenth major installment in the Assassin's Creed series and the successor to Assassin's Creed Mirage (2023).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 4 -->
+        <div class="carousel-item">
+          <a href="game-pages/doom-the-dark-ages.html" class="img-container">
+            <img src="images/doom-the-dark-ages.jpg" class="d-block mx-auto img-fluid" alt="Game 4" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">DOOM <br> The Dark Ages</div>
+            </a>
+                <h5>DOOM: <br> The Dark Ages</h5>
+                <p>Doom: The Dark Ages is a 2025 first-person shooter game developed by id Software and published by Bethesda Softworks.
+                     It is the eighth main entry in the Doom franchise and the third installment of the modern series, succeeding Doom Eternal (2020). 
+                     The game is set many years prior to Doom (2016) and follows the Doom Slayer's efforts to save humanity during a war against Hell.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 5 -->
+        <div class="carousel-item">
+          <a href="game-pages/elden-ring.html" class="img-container">
+            <img src="images/elden-ring.jpg" class="d-block mx-auto img-fluid" alt="Game 5" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Elden Ring</div>
+            </a>
+                <h5>Elden Ring</h5>
+                <p>Elden Ring[b] is a 2022 action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. 
+                    It was directed by Hidetaka Miyazaki with worldbuilding provided by the American fantasy writer George R. R. Martin. 
+                    It was released on February 25, 2022 for PlayStation 4, PlayStation 5, Windows, Xbox One and Xbox Series X/S.
+                     A Nintendo Switch 2 version is set to be released in 2025. Set in the Lands Between, players control a customizable player
+                      character on a quest to repair the Elden Ring and become the new Elden Lord.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 6 -->
+        <div class="carousel-item">
+          <a href="game-pages/helldivers-2.html" class="img-container">
+            <img src="images/helldivers-2.jpg" class="d-block mx-auto img-fluid" alt="Game 6" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">HELLDIVERS II</div>
+            </a>
+                <h5>HELLDIVERS II</h5>
+                <p>Helldivers 2 is a 2024 cooperative third-person shooter game developed by Arrowhead Game Studios and published 
+                    by Sony Interactive Entertainment for the PlayStation 5 and Windows. The game is the direct sequel to Helldivers (2015).
+                     Set in the 22nd century, the story follows the Helldivers, a force of shock troops dispatched to combat various threats
+                      to humanity.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 7 -->
+        <div class="carousel-item">
+          <a href="game-pages/god-of-war-ragnarok.html" class="img-container">
+            <img src="images/god-of-war-ragnarok.jpg" class="d-block mx-auto img-fluid" alt="Game 7" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">God of War <br> Ragnarok</div>
+            </a>
+                <h5>God of War <br> Ragnarök</h5>
+                <p>God of War Ragnarök is a 2022 action-adventure game developed by Santa Monica Studio and published
+                     by Sony Interactive Entertainment. It was released worldwide on November 9, 2022, for both the PlayStation 4 
+                     and PlayStation 5, marking the first cross-generation release in the God of War series, and was released for Windows
+                      on September 19, 2024. It is the ninth installment in the series, the ninth chronologically, and the sequel to 2018's
+                       God of War. Loosely based on Norse mythology, the game is set in ancient Scandinavia and features series protagonist,
+                        Kratos, and his now teenage son, Atreus. Concluding the Norse era of the series, the story follows Kratos and Atreus' 
+                        efforts to prevent the nine realms from being destroyed by Ragnarök, the eschatological event which is central to Norse
+                         mythology and was foretold to happen in the previous game after Kratos killed the Aesir god Baldur.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 8 -->
+        <div class="carousel-item">
+          <a href="game-pages/horizon-forbidden-west.html" class="img-container">
+            <img src="images/horizon-forbidden-west.jpg" class="d-block mx-auto img-fluid" alt="Game 8" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Horizon II <br> Forbidden West</div>
+              </a>
+                <h5>Horizon II<br> Forbidden West</h5>
+                <p>Horizon Forbidden West is a 2022 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment.
+                     The sequel to Horizon Zero Dawn (2017), the game is set in a post-apocalyptic version of the Western United States,
+                      recovering from the aftermath of an extinction event caused by a rogue robot swarm. The player, assuming control of Aloy,
+                       must venture into the Forbidden West to find the source of a mysterious plague that kills all it infects. The player can explore 
+                       the open world and complete quests using ranged and melee weapons against machine creatures and hostile rebels. Forbidden West 
+                       introduced new gameplay mechanics to the franchise, such as new traversal tools, underwater exploration, and expanded melee combat.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 9 -->
+        <div class="carousel-item">
+          <a href="game-pages/baldurs-gate-3.html" class="img-container">
+            <img src="images/baldur's-gate.jpg" class="d-block mx-auto img-fluid" alt="Game 9" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Baldur's Gate 3</div>
+              </a>
+                <h5>Baldur's Gate 3</h5>
+                <p>Baldur's Gate 3 is a 2023 role-playing video game developed and published by Larian Studios.
+                     It is the third main installment of the Baldur's Gate series, based on the tabletop fantasy role-playing game
+                      Dungeons & Dragons. A partial version of the game was released in early access for macOS and Windows 
+                      in October 2020 until the full release for Windows in August 2023, with versions for PlayStation 5, macOS, 
+                      and Xbox Series X/S releasing later that year.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 10 -->
+        <div class="carousel-item">
+          <a href="game-pages/the-last-of-us-part-2.html" class="img-container">
+            <img src="images/the-last-of-us-part-2.jpg" class="d-block mx-auto img-fluid" alt="Game 10" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">The Last of Us <br> Part II</div>
+              </a>
+                <h5>The Last of Us <br> Part II</h5>
+                <p>The Last of Us Part II is a 2020 action-adventure game developed by Naughty Dog and published by Sony Interactive Entertainment.
+                     Set four years after The Last of Us (2013), the game focuses on two playable characters in a post-apocalyptic
+                      United States whose lives intertwine: Ellie, who sets out in revenge for Joel's murder, and Abby, a soldier who
+                       becomes involved in a conflict between her militia and a religious cult. The game uses a third-person perspective;
+                        the player must fight human enemies and zombie-like creatures with firearms, improvised weapons, and stealth.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 11 -->
+        <div class="carousel-item">
+          <a href="#" class="img-container">
+          <img src="images/black-myth-wukong.jpeg" class="d-block mx-auto img-fluid" alt="Game 11" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Black Myth <br> Wukong</div>
+              </a>
+              <h5>Black Myth <br> Wukong</h5>
+                <p>Black Myth: Wukong is an action RPG rooted in Chinese mythology. 
+                  You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured
+                   truth beneath the veil of a glorious legend from the past.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 12 -->
+        <div class="carousel-item">
+          <a href="game-pages/borderlands-4.html" class="img-container">
+          <img src="images/borderlands-4.avif" class="d-block mx-auto img-fluid" alt="Game 12" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Borderlands 4</div>
+              </a>
+              <h5>Borderlands 4</h5>
+              <p>Borderlands 4 is an upcoming action role-playing first-person looter shooter video game developed by Gearbox Software
+                 and published by 2K. It is a sequel to Borderlands 3 (2019) and the fifth entry in the main Borderlands series.
+                  The game is scheduled to release for PlayStation 5, Windows, and Xbox Series X/S on September 12, 2025, and the 
+                  Nintendo Switch 2 at a later date.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 13 -->
+        <div class="carousel-item">
+          <a href="game-pages/cyberpunk-2077.html" class="img-container">
+          <img src="images/cyberpunk-2077.avif" class="d-block mx-auto img-fluid" alt="Game 13" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Cyberpunk 2077</div>
+              </a>
+              <h5>Cyberpunk 2077</h5>
+              <p>Cyberpunk 2077 is a 2020 action role-playing game developed by the Polish studio CD Projekt Red and published by CD Projekt.
+                 Based on Mike Pondsmith's Cyberpunk tabletop game series, the plot is set in the fictional metropolis of Night City,
+                  California, within the dystopian Cyberpunk universe. The player assumes the role of V (voiced by Gavin Drea or Cherami Leigh),
+                   a mercenary who gets reluctantly imbued with a cybernetic "bio-chip" containing an engram of legendary rockstar and
+                    terrorist Johnny Silverhand (voiced by Keanu Reeves). As Johnny's consciousness begins overwriting V's own,
+                     the two must work together to separate from each other and save V's life.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 Game 14 -->
+        <div class="carousel-item">
+          <a href="game-pages/dragon-age-the-veilguard.html" class="img-container">
+          <img src="images/dragon-age-the-veilguard.jpg" class="d-block mx-auto img-fluid" alt="Game 14" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Dragon Age <br> The Veilguard</div>
+              </a>
+              <h5>Dragon Age <br> The Veilguard</h5>
+              <p>Dragon Age: The Veilguard is a 2024 action role-playing game developed by BioWare and published by Electronic Arts.
+                 It is the fourth major game in the Dragon Age franchise, and the sequel to Dragon Age: Inquisition (2014).
+                  The story follows a customizable player character called Rook as they prevent the elven trickster god
+                   Solas from ending the world. In the process, Rook accidentally frees two other amoral elven gods and must also
+                    prevent them from conquering the world. Like its predecessor, the player character is controlled from a third-person
+                     perspective, but Veilguard foregoes Inquisition's open world in favour of discrete levels accessed via fast travel
+                      and emphasizes a new combo ability system.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- 🔽 Game 15 -->
+        <div class="carousel-item">
+          <a href="game-pages/elden-ring-nightreign.html" class="img-container">
+          <img src="images/elden-ring-nightreign.avif" class="d-block mx-auto img-fluid" alt="Game 15" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Elden Ring <br> Nightreign</div>
+              </a>
+              <h5>Elden Ring <br> Nightreign</h5>
+              <p>Elden Ring Nightreign[a] is an upcoming 2025 action role-playing game developed by FromSoftware and published by
+                 Bandai Namco Entertainment. A cooperative spinoff of Elden Ring, it was revealed at The Game Awards 2024, and is
+                  scheduled to be released for the PlayStation 4, PlayStation 5, Windows, Xbox One, and Xbox Series X/S.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- 🔽 Game 16 -->
+        <div class="carousel-item">
+          <a href="game-pages/ghost-of-yotei.html" class="img-container">
+          <img src="images/ghost-of-yotei.avif" class="d-block mx-auto img-fluid" alt="Game 16" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Ghost of Yotei</div>
+              </a>
+              <h5>Ghost of Yotei</h5>
+              <p>Ghost of Yōtei is an upcoming 2025 action-adventure game developed by Sucker Punch Productions and published by 
+                Sony Interactive Entertainment. It is a standalone sequel to the 2020 game, Ghost of Tsushima.[1] The game is scheduled
+                 to release for the PlayStation 5 on October 2, 2025.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- 🔽 Game 17 -->
+        <div class="carousel-item">
+          <a href="game-pages/gta-vi.html" class="img-container">
+          <img src="images/gta-VI.jpg" class="d-block mx-auto img-fluid" alt="Game 17" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">GTA VI</div>
+              </a>
+              <h5>GTA VI</h5>
+              <p>Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games.
+                 It is due to be the eighth main Grand Theft Auto game, following Grand Theft Auto V (2013), and the sixteenth entry overall.
+                  Set within an open world—the fictional U.S. state of Leonida, based on Florida, and its Miami-inspired Vice City—the
+                   story follows the criminal duo of Jason Duval and Lucia Caminos.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- 🔽 Game 18 -->
+        <div class="carousel-item">
+          <a href="game-pages/hollow-knight-silksong.html" class="img-container">
+          <img src="images/hollow-knight-silksong.webp" class="d-block mx-auto img-fluid" alt="Game 18" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Hollow Knight <br> SILKSONG</div>
+              </a>
+              <h5>Hollow Knight <br> SILKSONG</h5>
+              <p>Hollow Knight: Silksong is an upcoming Metroidvania video game developed by Australian independent
+                 developer Team Cherry scheduled to be released in 2025.[1] The sequel to Hollow Knight, it is being
+                  developed for Linux, macOS, Nintendo Switch, Nintendo Switch 2, PlayStation 4, PlayStation 5, Windows, Xbox One,
+                   and Xbox Series X/S.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- 🔽 Game 19 -->
+        <div class="carousel-item">
+          <a href="game-pages/stalker-2.html" class="img-container">
+          <img src="images/stalker-2.jpg" class="d-block mx-auto img-fluid" alt="Game 19" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Stalker 2</div>
+              </a>
+              <h5>Stalker 2</h5>
+              <p>S.T.A.L.K.E.R. 2: Heart of Chornobyl (Ukrainian: S.T.A.L.K.E.R. 2: Серце Чорнобиля) is a 2024 first-person shooter,
+                 survival horror video game developed and published by GSC Game World. It is the fourth main game released in the S.T.A.L.K.E.R.
+                  video game series, as well as the first S.T.A.L.K.E.R. game in 15 years since the release of Call of Pripyat in 2009.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- 🔽 Game 20 -->
+        <div class="carousel-item">
+          <a href="game-pages/star-wars-outlaws.html" class="img-container">
+          <img src="images/star-wars-outlaws.jpg" class="d-block mx-auto img-fluid" alt="Game 20" style="max-height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-box">
+              <div class="overlay">Star Wars <br> Outlaws</div>
+              </a>
+              <h5>Star Wars <br> Outlaws</h5>
+              <p>Star Wars Outlaws is a 2024 action-adventure game developed by Massive Entertainment and published by Ubisoft.
+                 Set in the Star Wars universe between the events of The Empire Strikes Back (1980) and Return of the Jedi (1983),
+                  the story follows Kay Vess, a young scoundrel who assembles a team for a massive heist in order to escape a crime syndicate.
+                  The game is played from a third-person perspective, with the player traversing an open world environment and engaging
+                   in various activities.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 👈 Bal gomb -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <!-- 👉 Jobb gomb -->
+      <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- ✅ Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ Saját JS -->
+  <script src="js/script.js"></script>
+
+  <!-- ✅ Saját foooter -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <small>© 2025 Created: Tomáš Bari. All rights reserved.</small>
+    </div>
+  </footer>
+
+</body>
+</html>

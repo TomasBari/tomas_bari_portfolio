@@ -1,0 +1,518 @@
+/* --- ALAP --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #071a39; /* sötét jeges kék alap */
+    color: #a0c8ff; /* hideg, világos kék szöveg */
+    text-shadow: 0 0 8px #7aaaff; /* halvány kék glow */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+html{
+    background-color: inherit;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #061830; /* sötétebb kék footer */
+    color: #aacdff;
+    text-shadow: none;
+}
+
+.carousel-caption {
+    position: static;
+    padding: 1rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption-box {
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: #a0c8ff;
+    text-shadow: 0 0 5px #7aaaff;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.side-header {
+    background-color: #122b57; /* középkék háttér */
+    color: #c1d9ff; /* világos jeges szöveg */
+    padding: 10px 0;
+    border-bottom: 3px solid #2c4f94; /* hideg kék vonal */
+}
+
+.side-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #c4d9ff;
+    text-shadow: 0 0 5px #92baff;
+}
+
+.logo-img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #bddcff; /* világosabb jeges kék */
+    margin-left: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-shadow: 0 0 5px #80aaff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #2c5cb5; /* mélyebb kék hover */
+    text-shadow: 0 0 10px #4a7cfb;
+}
+
+.navbar-nav .nav-link.active {
+    color: #2554a7; /* aktív link kék */
+    text-shadow: 0 0 12px #4486ff, 0 0 300px #8cbaff;
+    font-weight: bold;
+}
+
+.upcoming-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.upcoming-slider {
+    display: flex;
+    width: max-content; /* hogy pontos legyen a szélesség */
+    animation: scroll-left 30s linear infinite;
+}
+
+.game-item {
+    flex: 0 0 auto; /* fix méret, ne törjön */
+    width: 180px;
+    margin-right: 20px;
+}
+
+.game-item img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.game-item h5 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: inherit;
+    user-select: none;
+    
+}
+
+/* Animáció: folyamatos scroll jobbra-balra */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50%));
+    }
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.img-container:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.rating .star {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #f0ad4e; /* golden */
+    transition: color 0.3s ease;
+}
+
+.rating .star:hover {
+    color: #ffcc00;
+}
+
+.card .btn-outline-danger {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.card h5,
+.card p {
+    text-align: left;
+}
+
+/* Review card szélesség és méret */
+.card {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    background-color: #c4d9ff;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.btn-outline-danger.position-absolute {
+    font-size: 1.1rem;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    line-height: 1;
+    top: 0.5rem;
+    right: 0.5rem;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    background-color: #ff0000;
+}
+
+.btn-outline-danger.position-absolute:hover {
+    opacity: 1;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.review-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #061830;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.rating {
+    display: flex;
+    gap: 0.1rem;
+}
+
+.rating .star {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #061830;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.rating .star:hover,
+.rating .star:hover ~ .star {
+    color: #7aaaff;
+}
+
+.review-text {
+    font-size: 0.9rem;
+    color: #061830;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 100%;
+    line-height: 1.3;
+}
+
+.card p.review-text {
+    max-height: 3.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#thank-you-container {
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#thank-you {
+    font-size: 4rem;
+    color: #a0c8ff;
+    text-shadow: 0 0 15px #7aaaff;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+#thank-you.frozen {
+    color: #e0f7ff;
+    text-shadow: 0 0 25px #b0eaff;
+    transform: scale(1.1) rotate(-1deg);
+}
+
+#snow-canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #122b57;
+    border: 1px solid #2c4f94;
+    border-radius: 5px;
+    display: none;
+    padding: 5px;
+    z-index: 100;
+    flex-direction: column;
+    min-width: 4rem;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.season-option {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.season-option:hover {
+    background-color: #2c4f94;
+}
+
+/* --- ÉVSZAKOK --- */
+
+/* TÉL (alap) - marad az alap */
+
+/* TAVASZ */
+body.spring {
+    background-color: #ff9dce; /* világos rózsaszín háttér */
+    color: #2e7d32; /* sötétzöld szöveg */
+    text-shadow: 0 0 8px #4caf50; /* zöld glow */
+}
+
+body.spring .navbar {
+    background-color: #5d4037; /* barna, fa szín */
+}
+
+body.spring .site-title {
+    color: #d81b60; /* erősebb rózsaszín */
+    text-shadow: 0 0 8px #d81b60;
+}
+
+body.spring .navbar-nav .nav-link {
+    color: #388e3c; /* zöld */
+    text-shadow: 0 0 6px #66bb6a;
+}
+
+body.spring .navbar-nav .nav-link:hover {
+    color: #1b5e20; /* sötétzöld */
+    text-shadow: 0 0 12px #81c784;
+}
+
+body.spring .navbar-nav .nav-link.active {
+    color: #2e7d32;
+    font-weight: bold;
+    text-shadow: 0 0 15px #a5d6a7, 0 0 50px #4caf50;
+}
+
+body.spring #dropdownMenuButton {
+    background-color: #ad1457;
+    color: #fce4ec;
+    border-color: #880e4f;
+}
+
+body.spring .dropdown-menu {
+    background-color: #6d4c41;
+    border-color: #4e342e;
+}
+
+body.spring .dropdown-item {
+    color: #d81b60;
+}
+
+body.spring .dropdown-item:hover {
+    background-color: #4e342e;
+    color: #fce4ec;
+}
+
+body.spring footer {
+    background-color: #4e342e;
+    color: #c8e6c9;
+    text-shadow: 0 0 6px #4caf50;
+}
+
+/* NYÁR */
+body.summer {
+    background-color: #ffdcac; /* világos, meleg háttér */
+    color: #e65100; /* erős narancs */
+    text-shadow: 0 0 8px #ff6f00; /* narancs glow */
+}
+
+body.summer .navbar {
+    background-color: #f57c00; /* élénk narancs */
+}
+
+body.summer .site-title {
+    color: #bf360c; /* mély narancs */
+    text-shadow: 0 0 8px #ff8f00;
+}
+
+body.summer .navbar-nav .nav-link {
+    color: #ff8f00; /* narancssárga */
+    text-shadow: 0 0 6px #ffb300;
+}
+
+body.summer .navbar-nav .nav-link:hover {
+    color: #d84315; /* mély narancs */
+    text-shadow: 0 0 12px #ff6f00;
+}
+
+body.summer .navbar-nav .nav-link.active {
+    color: #e65100;
+    font-weight: bold;
+    text-shadow: 0 0 15px #ff8f00, 0 0 50px #ff6f00;
+}
+
+body.summer #dropdownMenuButton {
+    background-color: #ef6c00;
+    color: #fff3e0;
+    border-color: #bf360c;
+}
+
+body.summer .dropdown-menu {
+    background-color: #ffcc80;
+    border-color: #ffb300;
+}
+
+body.summer .dropdown-item {
+    color: #e65100;
+}
+
+body.summer .dropdown-item:hover {
+    background-color: #bf360c;
+    color: #fff3e0;
+}
+
+body.summer footer {
+    background-color: #ffcc80;
+    color: #bf360c;
+    text-shadow: 0 0 6px #ff6f00;
+}
+
+/* ŐSZ */
+body.autumn {
+    background-color: #3e2723; /* mély barna háttér */
+    color: #ff7043; /* narancsos-piros */
+    text-shadow: 0 0 8px #ff3d00; /* piros-narancs glow */
+}
+
+body.autumn .navbar {
+    background-color: #bf360c;
+}
+
+body.autumn .site-title {
+    color: #ffccbc;
+    text-shadow: 0 0 10px #ff3d00;
+}
+
+body.autumn .navbar-nav .nav-link {
+    color: #ff5722; /* narancs */
+    text-shadow: 0 0 6px #ff7043;
+}
+
+body.autumn .navbar-nav .nav-link:hover {
+    color: #bf360c; /* sötétebb barna-piros */
+    text-shadow: 0 0 12px #ff3d00;
+}
+
+body.autumn .navbar-nav .nav-link.active {
+    color: #e64a19;
+    font-weight: bold;
+    text-shadow: 0 0 15px #ff5722, 0 0 50px #bf360c;
+}
+
+body.autumn #dropdownMenuButton {
+    background-color: #ff7043;
+    color: #3e2723;
+    border-color: #bf360c;
+}
+
+body.autumn .dropdown-menu {
+    background-color: #4e342e;
+    border-color: #bf360c;
+}
+
+body.autumn .dropdown-item {
+    color: #ffccbc;
+}
+
+body.autumn .dropdown-item:hover {
+    background-color: #bf360c;
+    color: #ffccbc;
+}
+
+body.autumn footer {
+    background-color: #4e342e;
+    color: #ffccbc;
+    text-shadow: 0 0 6px #ff3d00;
+}

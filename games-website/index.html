@@ -1,0 +1,427 @@
+<!-- games-website/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game Chasers - Discover trending, upcoming, and top-rated games with reviews, galleries, and more. Level up your game!">
+
+  <title>GAME CHASERS - Home</title>
+  
+  <!-- ✅ Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- ✅ Saját stíluslap -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container d-flex align-items-center justify-content-between">
+      
+            <!-- Logó és cím -->
+            <div class="d-flex align-items-center">
+              <img src="images/logo/game-chasers-logo.png" alt="Game Chasers Logo" class="logo-img me-2 mt-2" style="height: 60px;">
+              <span class="site-title mb-0">GAME CHASERS</span>
+            </div>
+      
+            <!-- Hamburger gomb mobilra -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <!-- Navigációs menü -->
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reviews.html">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+              </ul>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  ❄️
+                </button>
+                <ul class="dropdown-menu" id="seasonDropdown">
+                  <li><button class="dropdown-item season-option" data-season="spring">🌸</button></li>
+                  <li><button class="dropdown-item season-option" data-season="summer">☀️</button></li>
+                  <li><button class="dropdown-item season-option" data-season="autumn">🍂</button></li>
+                  <li><button class="dropdown-item season-option" data-season="winter">❄️</button></li>
+                </ul>
+              </div>
+              
+            
+      
+          </div>
+        </nav>
+      </header>
+      
+      
+
+  <main class="container mt-4">
+    <img src="images/logo/game-chasers-logo.png" alt="Game Chasers Logo" class="logo-img me-2" style="height: 250px;">
+      <p>Level Up Your Game!
+      Dive into the latest reviews, epic galleries, and insider tips — all in one place. Ready to conquer? Let’s play.</p>
+
+      <!-- ✅ Trending Games -->
+      <section class="mt-5">
+        <h2 class="text-center mb-5">🔥 Trending Games</h2>
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <a href="game-pages/cyberpunk-2077.html" class="img-container">
+            <img src="images/trending/cyberpunk-2077.avif" class="img-fluid rounded shadow" alt="Cyberpunk 2077">
+            <div class="overlay">Cyberpunk 2077</div>
+            </a>
+            <h5 class="mt-2">Cyberpunk 2077</h5>
+            <p class="small">Open-world sci-fi with stunning visuals and deep storylines.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a href="game-pages/elden-ring.html" class="img-container">
+            <img src="images/trending/elden-ring.jpg" class="img-fluid rounded shadow" alt="Elden Ring">
+            <div class="overlay">Elden Ring</div>
+            </a>
+            <h5 class="mt-2">Elden Ring</h5>
+            <p class="small">Epic dark fantasy adventure with unmatched exploration.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a href="game-pages/gta-vi.html" class="img-container">
+            <img src="images/trending/gta-VI.jpg" class="img-fluid rounded shadow" alt="GTA VI">
+            <div class="overlay">GTA VI</div>
+            </a>
+            <h5 class="mt-2">GTA VI</h5>
+            <p class="small">The next generation of open-world action – coming soon.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ✅ Top Rated from Our Gallery -->
+      <section class="mt-5">
+        <h2 class="text-center mb-4">⭐ Top Rated from Our Gallery</h2>
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <a href="game-pages/elden-ring.html" class="img-container">
+            <img src="images/elden-ring.jpg" class="img-fluid rounded shadow" alt="Elden Ring">
+            <div class="overlay">Elden Ring</div>
+            </a>
+            <h5 class="mt-2">Elden Ring</h5>
+            <p class="small">An unforgettable journey through a hauntingly beautiful fantasy world.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a href="game-pages/helldivers-2.html" class="img-container">
+            <img src="images/helldivers-2.jpg" class="img-fluid rounded shadow" alt="Helldivers 2">
+            <div class="overlay">Helldivers 2</div>
+            </a>
+            <h5 class="mt-2">Helldivers 2</h5>
+            <p class="small">Co-op chaos meets tactical warfare in this fan-favorite shooter.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a href="game-pages/baldurs-gate-3.html" class="img-container">
+            <img src="images/baldur's-gate.jpg" class="img-fluid rounded shadow" alt="Baldur's Gate 3">
+            <div class="overlay">Baldur's Gate 3</div>
+            </a>
+            <h5 class="mt-2">Baldur's Gate 3</h5>
+            <p class="small">Critically acclaimed RPG blending deep lore with player-driven choices.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ✅ Game of the Month -->
+      <section class="mt-5 bg-dark text-white py-5 rounded">
+        <div class="container text-center">
+          <h2 class="mb-4">🏆 Game of the Month</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <a href="game-pages/god-of-war-ragnarok.html" class="img-container">
+              <img src="images/god-of-war-ragnarok.jpg" class="img-fluid rounded shadow mb-3" alt="God of War Ragnarok">
+              <div class="overlay">God of War <br> Ragnarok</div>
+              </a>
+              <h4>God of War: Ragnarok</h4>
+              <p class="small">Epic storytelling, mythological battles, and breathtaking visuals. This masterpiece continues Kratos' saga with emotional depth and raw power.</p>
+              <a href="game-pages/god-of-war-ragnarok.html" class="btn btn-primary mt-2">See More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ✅ Upcoming Games -->
+      <section class="mt-5 mb-5">
+        <h2 class="text-center mb-5">🚀 Upcoming Games</h2>
+      
+        <div class="upcoming-slider-wrapper">
+          <div class="upcoming-slider">
+            <div class="game-item text-center">
+              <a href="game-pages/elden-ring-nightreign.html" class="img-container">
+              <img src="images/upcoming/elden-ring-nightreign.avif" alt="Elden Ring: Nightreign" />
+              <div class="overlay">Elden Ring <br> Nightreign</div>
+              </a>
+              <h5>Elden Ring: Nightreign</h5>
+            </div>
+            <div class="game-item text-center">
+              <a href="game-pages/ghost-of-yotei.html" class="img-container">
+              <img src="images/upcoming/ghost-of-yotei.avif" alt="Ghost of Yōtei" />
+              <div class="overlay">Ghost of Yotei</div>
+              </a>
+              <h5>Ghost of Yōtei</h5>
+            </div>
+            <div class="game-item text-center">
+              <a href="game-pages/assassins-creed-shadows.html" class="img-container">
+              <img src="images/upcoming/ac-shadows.jpg" alt="Assassin's Creed Shadows" />
+              <div class="overlay">Assassin's Creed <br> Shadows</div>
+              </a>
+              <h5>Assassin's Creed Shadows</h5>
+            </div>
+            <div class="game-item text-center">
+              <a href="game-pages/borderlands-4.html" class="img-container">
+              <img src="images/upcoming/borderlands-4.avif" alt="Borderlands 4" />
+              <div class="overlay">Borderlands 4</div>
+              </a>
+              <h5>Borderlands 4</h5>
+            </div>
+            <div class="game-item text-center">
+              <a href="game-pages/gta-vi.html" class="img-container">
+              <img src="images/upcoming/gta-VI.jpg" alt="GTA VI" />
+              <div class="overlay">GTA VI</div>
+              </a>
+              <h5>GTA VI</h5>
+            </div>
+            <div class="game-item text-center">
+              <a href="game-pages/hollow-knight-silksong.html" class="img-container">
+              <img src="images/upcoming/hollow-knight-silksong.webp" alt="Hollow Knight Silksong" />
+              <div class="overlay">Hollow Knight <br> Silksong</div>
+              </a>
+              <h5>Hollow Knight: Silksong</h5>
+            </div>
+            <div class="game-item text-center">
+              <a href="game-pages/black-myth-wukong.html" class="img-container">
+              <img src="images/upcoming/black-myth-wukong.jpeg" alt="Black Myth Wukong" />
+              <div class="overlay">Black Myth <br> Wukong</div>
+              </a>
+              <h5>Black Myth: Wukong</h5>
+            </div>
+            <div class="game-item text-center">
+              <a href="game-pages/dragon-age-the-veilguard.html" class="img-container">
+              <img src="images/upcoming/dragon-age-the-veilguard.jpg" alt="Dragon Age: The Veilguard" />
+              <div class="overlay">Dragon Age <br> The Veilguard</div>
+              </a>
+              <h5>Dragon Age: The Veilguard</h5>
+            </div>
+            <div class="game-item text-center">
+              <a href="game-pages/stalker-2.html" class="img-container">
+              <img src="images/upcoming/stalker-2.jpg" alt="Stalker 2" />
+              <div class="overlay">Stalker 2</div>
+              </a>
+              <h5>Stalker 2</h5>
+            </div>
+            <div class="game-item text-center">
+              <a href="game-pages/star-wars-outlaws.html" class="img-container">
+              <img src="images/upcoming/star-wars-outlaws.jpg" alt="Star Wars Outlaws" />
+              <div class="overlay">Star Wars <br> Outlaws</div>
+              </a>
+              <h5>Star Wars: Outlaws</h5>
+            </div>
+              <!-- For image loop -->
+              <div class="game-item text-center">
+                <a href="game-pages/elden-ring-nightreign.html" class="img-container">
+                <img src="images/upcoming/elden-ring-nightreign.avif" alt="Elden Ring: Nightreign" />
+                <div class="overlay">Elden Ring <br> Nightreign</div>
+                </a>
+                <h5>Elden Ring: Nightreign</h5>
+              </div>
+              <div class="game-item text-center">
+                <a href="game-pages/ghost-of-yotei.html" class="img-container">
+                <img src="images/upcoming/ghost-of-yotei.avif" alt="Ghost of Yōtei" />
+                <div class="overlay">Ghost of Yotei</div>
+                </a>
+                <h5>Ghost of Yōtei</h5>
+              </div>
+              <div class="game-item text-center">
+                <a href="game-pages/assassins-creed-shadows.html" class="img-container">
+                <img src="images/upcoming/ac-shadows.jpg" alt="Assassin's Creed Shadows" />
+                <div class="overlay">Assassin's Creed <br> Shadows</div>
+                </a>
+                <h5>Assassin's Creed Shadows</h5>
+              </div>
+              <div class="game-item text-center">
+                <a href="game-pages/borderlands-4.html" class="img-container">
+                <img src="images/upcoming/borderlands-4.avif" alt="Borderlands 4" />
+                <div class="overlay">Borderlands 4</div>
+                </a>
+                <h5>Borderlands 4</h5>
+              </div>
+              <div class="game-item text-center">
+                <a href="game-pages/gta-vi.html" class="img-container">
+                <img src="images/upcoming/gta-VI.jpg" alt="GTA VI" />
+                <div class="overlay">GTA VI</div>
+                </a>
+                <h5>GTA VI</h5>
+              </div>
+              <div class="game-item text-center">
+                <a href="game-pages/hollow-knight-silksong.html" class="img-container">
+                <img src="images/upcoming/hollow-knight-silksong.webp" alt="Hollow Knight Silksong" />
+                <div class="overlay">Hollow Knight <br> Silksong</div>
+                </a>
+                <h5>Hollow Knight: Silksong</h5>
+              </div>
+              <div class="game-item text-center">
+                <a href="game-pages/black-myth-wukong.html" class="img-container">
+                <img src="images/upcoming/black-myth-wukong.jpeg" alt="Black Myth Wukong" />
+                <div class="overlay">Black Myth <br> Wukong</div>
+                </a>
+                <h5>Black Myth: Wukong</h5>
+              </div>
+              <div class="game-item text-center">
+                <a href="game-pages/dragon-age-the-veilguard.html" class="img-container">
+                <img src="images/upcoming/dragon-age-the-veilguard.jpg" alt="Dragon Age: The Veilguard" />
+                <div class="overlay">Dragon Age <br> The Veilguard</div>
+                </a>
+                <h5>Dragon Age: The Veilguard</h5>
+              </div>
+              <div class="game-item text-center">
+                <a href="game-pages/stalker-2.html" class="img-container">
+                <img src="images/upcoming/stalker-2.jpg" alt="Stalker 2" />
+                <div class="overlay">Stalker 2</div>
+                </a>
+                <h5>Stalker 2</h5>
+              </div>
+              <div class="game-item text-center">
+                <a href="game-pages/star-wars-outlaws.html" class="img-container">
+                <img src="images/upcoming/star-wars-outlaws.jpg" alt="Star Wars Outlaws" />
+                <div class="overlay">Star Wars <br> Outlaws</div>
+                </a>
+                <h5>Star Wars: Outlaws</h5>
+              </div>
+
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <!-- ✅ Comunity Poll -->
+      <section class="mt-5">
+        <div class="container text-center">
+          <h2 class="mb-4">📊 Community Poll</h2>
+          <p class="mb-3">Which upcoming release are you most excited for?</p>
+      
+          <form id="pollForm" class="mx-auto" style="max-width: 400px;">
+            <div class="row justify-content-center">
+              <div class="col-md-6 text-start">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote1" value="black-myth">
+                  <label class="form-check-label" for="vote1">Black Myth: Wukong</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote2" value="star-wars-outlaws">
+                  <label class="form-check-label" for="vote2">Star Wars: Outlaws</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote3" value="stalker-2">
+                  <label class="form-check-label" for="vote3">STALKER 2</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote4" value="dragon-age-the-veilguard">
+                  <label class="form-check-label" for="vote4">Dragon Age: The Veilguard</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote5" value="elden-ring-nightreign">
+                  <label class="form-check-label" for="vote5">Elden Ring: Nightreign</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote6" value="gta-vi">
+                  <label class="form-check-label" for="vote6">GTA VI</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote7" value="hollow-knight-silksong">
+                  <label class="form-check-label" for="vote7">Hollow Knight: Silksong</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote8" value="ghost-of-yotei">
+                  <label class="form-check-label" for="vote8">Ghost of Yotei</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote9" value="ac-shadows">
+                  <label class="form-check-label" for="vote9">Assassin's Creed Shadows</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="vote" id="vote10" value="borderlands-4">
+                  <label class="form-check-label" for="vote10">Borderlands 4</label>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mt-3">
+              <button type="submit" class="btn btn-primary">Vote Now</button>
+            </div>
+          </form>
+          
+      
+          <div id="pollMessage" class="mt-3 text-success" style="display:none;">
+            Thank you for voting!
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      
+  </main>
+
+  <!-- ✅ Bootstrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ Saját JS fájl -->
+  <script src="js/script.js"></script>
+
+   <!-- ✅ Saját footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <small>© 2025 Created: Tomáš Bari. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const seasonButtons = document.querySelectorAll('.season-option');
+      const dropdownButton = document.getElementById('dropdownMenuButton');
+      const body = document.body;
+  
+      // ikonok évszakhoz társítva
+      const seasonIcons = {
+        spring: '🌸',
+        summer: '☀️',
+        autumn: '🍂',
+        winter: '❄️'
+      };
+  
+      seasonButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const selectedSeason = button.getAttribute('data-season');
+  
+          // Töröljük az előző évszak osztályokat
+          body.classList.remove('spring', 'summer', 'autumn', 'winter');
+  
+          // Újat adunk hozzá
+          if (selectedSeason !== 'winter') {
+            body.classList.add(selectedSeason);
+          }
+  
+          // Dropdown ikon frissítése
+          dropdownButton.textContent = seasonIcons[selectedSeason];
+        });
+      });
+    });
+  </script>
+  
+
+</body>
+</html>

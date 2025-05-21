@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GAME CHASERS - Reviews</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container d-flex align-items-center justify-content-between">
+      
+            <!-- Logó és cím -->
+            <div class="d-flex align-items-center">
+              <img src="images/logo/game-chasers-logo.png" alt="Game Chasers Logo" class="logo-img me-2" style="height: 60px;">
+              <span class="site-title mb-0">GAME CHASERS</span>
+            </div>
+      
+            <!-- Hamburger gomb mobilra -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <!-- Navigációs menü -->
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="reviews.html">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+              </ul>
+            </div>
+      
+          </div>
+        </nav>
+      </header>
+
+  <main class="container mt-4">
+    <h2 class="mb-5">Reviews</h2>
+    <p class="mb-5">Here you can share your thoughts and experiences about games or other players. Keep it friendly, no insults or discrimination allowed. Let’s keep it chill and have fun!
+    </p>
+
+
+    <div class="d-flex justify-content-center">
+      <div class="card p-4 shadow" style="max-width: 600px; width: 100%;">
+        <h4 class="mb-3">Add Your Review</h4>
+        <form id="reviewForm">
+          <div class="mb-3">
+            <label for="reviewerName" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="reviewerName" required />
+          </div>
+          <div class="mb-3">
+            <label for="reviewText" class="form-label">Your Review</label>
+            <textarea class="form-control" id="reviewText" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit Review</button>
+        </form>
+      </div>
+    </div>
+    
+    <hr class="my-5" />
+    <h3 class="mb-4">What Others Say</h3>
+    <div id="reviewList"></div>
+    
+
+    
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- ✅ Saját foooter -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <small>© 2025 Created: Tomáš Bari. All rights reserved.</small>
+    </div>
+  </footer>
+
+</body>
+</html>
