@@ -11,26 +11,54 @@
 
   <!-- ✅ Navigáció -->
   <header class="site-header">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <div class="container d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center">
-          <img src="../images/logo/game-chasers-logo.png" alt="Logo" class="logo-img me-2" style="height: 60px;" />
-          <span class="site-title mb-0">GAME CHASERS</span>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="../gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="../reviews.html">Reviews</a></li>
-            <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container d-flex align-items-center justify-content-between">
+      
+            <!-- Logó és cím -->
+            <div class="d-flex align-items-center">
+              <img src="../images/logo/game-chasers-logo.png" alt="Game Chasers Logo" class="logo-img me-2 mt-2" style="height: 60px;">
+              <span class="site-title mb-0">GAME CHASERS</span>
+            </div>
+      
+            <!-- Hamburger gomb mobilra -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <!-- Navigációs menü -->
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="../gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../reviews.html">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../about.html">About</a>
+                </li>
+              </ul>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  ❄️
+                </button>
+                <ul class="dropdown-menu" id="seasonDropdown">
+                  <li><button class="dropdown-item season-option" data-season="spring">🌸</button></li>
+                  <li><button class="dropdown-item season-option" data-season="summer">☀️</button></li>
+                  <li><button class="dropdown-item season-option" data-season="autumn">🍂</button></li>
+                  <li><button class="dropdown-item season-option" data-season="winter">❄️</button></li>
+                </ul>
+              </div>
+              
+            
+      
+          </div>
+        </nav>
+      </header>
 
   <!-- ✅ Tartalom -->
   <main class="container mt-5">
@@ -86,6 +114,10 @@
     </section>
 
     <a href="../index.html" class="btn btn-secondary">← Back to Home</a>
+    <!-- ✅ Saját JS fájl -->
+  <script src="../js/script.js"></script>
+  <script src="../js/theme-switcher.js"></script>
+
   </main>
 
   <footer class="text-center mt-5 mb-4">
@@ -93,5 +125,38 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const seasonButtons = document.querySelectorAll('.season-option');
+      const dropdownButton = document.getElementById('dropdownMenuButton');
+      const body = document.body;
+  
+      // ikonok évszakhoz társítva
+      const seasonIcons = {
+        spring: '🌸',
+        summer: '☀️',
+        autumn: '🍂',
+        winter: '❄️'
+      };
+  
+      seasonButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const selectedSeason = button.getAttribute('data-season');
+  
+          // Töröljük az előző évszak osztályokat
+          body.classList.remove('spring', 'summer', 'autumn', 'winter');
+  
+          // Újat adunk hozzá
+          if (selectedSeason !== 'winter') {
+            body.classList.add(selectedSeason);
+          }
+  
+          // Dropdown ikon frissítése
+          dropdownButton.textContent = seasonIcons[selectedSeason];
+        });
+      });
+    });
+  </script>
 </body>
 </html>

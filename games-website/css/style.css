@@ -44,6 +44,27 @@ footer {
     font-size: 1rem;
 }
 
+body.winter .caption-box {
+  color: #a0c8ff;
+  text-shadow: 0 0 5px #7aaaff;
+}
+
+body.spring .caption-box {
+  color: #2e7d32; /* tavaszi szín */
+  text-shadow: 0 0 5px #4caf50;
+}
+
+body.summer .caption-box {
+  color: #e65100; /* nyári szín */
+  text-shadow: 0 0 5px #ffa500;
+}
+
+body.autumn .caption-box {
+  color: #ff7043; /* őszi szín */
+  text-shadow: 0 0 5px #ff4500;
+}
+
+
 .side-header {
     background-color: #122b57; /* középkék háttér */
     color: #c1d9ff; /* világos jeges szöveg */
@@ -275,6 +296,23 @@ ul {
     text-overflow: ellipsis;
 }
 
+body.spring .card {
+  background-color: #d6f5d6; /* világoszöld */
+}
+
+body.summer .card {
+  background-color: #fcc544; /* világossárga */
+}
+
+body.autumn .card {
+  background-color: #ffd6a5; /* világos narancs */
+}
+
+body.winter .card {
+  background-color: #c4d9ff; /* világoskék, maradhat ez az alap */
+}
+
+
 #thank-you-container {
     position: relative;
     height: 300px;
@@ -286,8 +324,8 @@ ul {
 
 #thank-you {
     font-size: 4rem;
-    color: #a0c8ff;
-    text-shadow: 0 0 15px #7aaaff;
+    color: inherit;
+    text-shadow: 0 0 15px inherit;
     cursor: pointer;
     z-index: 10;
     transition: transform 0.4s ease, color 0.4s ease;

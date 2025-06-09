@@ -90,21 +90,39 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- "Thank You" + hóesés animáció ---
-  const thankYou = document.getElementById("thank-you");
-  const canvas = document.getElementById("snow-canvas");
-
-  if (thankYou && canvas) {
+  
+    const thankYou = document.getElementById("thank-you");
+    const canvas = document.getElementById("snow-canvas");
+  
+    if (!thankYou || !canvas) return;
+  
     const ctx = canvas.getContext("2d");
+    let animationId = null;
+    let currentSeason = "winter"; // Alapértelmezett
     let snowflakes = [];
-
+    let sakuraPetals = [];
+  
     function resizeCanvas() {
       canvas.width = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
     }
-
+  
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
+  
+    function stopAnimation() {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
 
+      // Töröljük a canvas-t és az elemeket
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      sakuraPetals = [];
+      snowflakes = [];
+    }
+  
+    // --- Hó animáció ---
     function createSnowflake() {
       return {
         x: Math.random() * canvas.width,
@@ -114,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
         drift: Math.random() * 0.6 - 0.3
       };
     }
-
+  
     function drawSnowflakes() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let flake of snowflakes) {
@@ -124,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.fill();
       }
     }
-
+  
     function updateSnowflakes() {
       for (let flake of snowflakes) {
         flake.y += flake.speed;
@@ -135,115 +153,111 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     }
-
-    function loop() {
+  
+    function snowLoop() {
       drawSnowflakes();
       updateSnowflakes();
-      requestAnimationFrame(loop);
+      animationId = requestAnimationFrame(snowLoop);
     }
-
-    thankYou.addEventListener("click", function () {
-      thankYou.classList.toggle("frozen");
-      snowflakes = Array.from({ length: 100 }, createSnowflake);
-      loop();
-    });
-  }
-
-  // --- Évszak váltás ---
-
-  const dropbtn = document.getElementById('dropdownMenuButton');
-  const dropdownMenu = document.querySelector('.dropdown-menu');
-  const seasonButtons = document.querySelectorAll('.season-option');
-  seasonButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const season = button.dataset.season;
-      document.body.className = '';
-      document.body.classList.add(season);
-
-      // Bootstrap dropdown bezárása
-      const dropdown = bootstrap.Dropdown.getInstance(dropbtn);
-      if (dropdown) dropdown.hide();
-    });
-  });
-
-  // --- Sakura virág hullás animáció (spring témához) ---
-if (thankYou && canvas) {
-  const ctx = canvas.getContext("2d");
-  let sakuraPetals = [];
-
-  function resizeCanvas() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-  }
-
-  window.addEventListener("resize", resizeCanvas);
-  resizeCanvas();
-
-  function createPetal() {
-    return {
-      x: Math.random() * canvas.width,
-      y: Math.random() * -canvas.height,
-      radius: Math.random() * 6 + 4,
-      speed: Math.random() * 1 + 0.5,
-      drift: Math.random() * 0.8 - 0.4,
-      rotation: Math.random() * 360,
-      rotationSpeed: (Math.random() - 0.5) * 2
-    };
-  }
-
-  function drawPetal(petal) {
-    ctx.save();
-    ctx.translate(petal.x, petal.y);
-    ctx.rotate((petal.rotation * Math.PI) / 180);
-    // Egyszerű virág alakzat (5 szirmú)
-    ctx.fillStyle = "rgba(255, 182, 193, 0.8)"; // halvány rózsaszín
-    ctx.beginPath();
-    for (let i = 0; i < 5; i++) {
-      const angle = (i * 2 * Math.PI) / 5;
-      const x = Math.cos(angle) * petal.radius;
-      const y = Math.sin(angle) * petal.radius;
-      ctx.lineTo(x, y);
+  
+    // --- Sakura animáció ---
+    function createPetal() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        scale: 0,
+        maxScale: Math.random() * 0.3 + 0.7,
+        opacity: 0,
+        growing: true,
+        life: 0,
+        maxLife: 200 + Math.random() * 100,
+        rotation: Math.random() * 360
+      };
     }
-    ctx.closePath();
-    ctx.fill();
-    ctx.restore();
-  }
-
-  function drawPetals() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let petal of sakuraPetals) {
-      drawPetal(petal);
-    }
-  }
-
-  function updatePetals() {
-    for (let petal of sakuraPetals) {
-      petal.y += petal.speed;
-      petal.x += petal.drift;
-      petal.rotation += petal.rotationSpeed;
-      if (petal.y > canvas.height) {
-        Object.assign(petal, createPetal());
-        petal.y = 0;
+    
+    function drawPetal(petal) {
+      ctx.save();
+      ctx.translate(petal.x, petal.y);
+      ctx.rotate((petal.rotation * Math.PI) / 180);
+      ctx.scale(petal.scale, petal.scale); // <-- helyes 'petal'
+      ctx.globalAlpha = petal.opacity;
+    
+      const sziromSzam = 5;
+      const radius = 20;
+      for (let i = 0; i < sziromSzam; i++) {
+        const angle = (i * 2 * Math.PI) / sziromSzam;
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+        
+        ctx.beginPath();
+        ctx.ellipse(x, y, 10, 20, angle, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(255, 182, 193, 0.9)";
+        ctx.fill();
       }
-      if (petal.x > canvas.width) petal.x = 0;
-      if (petal.x < 0) petal.x = canvas.width;
+    
+      ctx.beginPath();
+      ctx.arc(0, 0, 5, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(60, 120, 60, 0.8)";
+      ctx.fill();
+    
+      ctx.restore();
     }
-  }
-
-  function loop() {
-    drawPetals();
-    updatePetals();
-    requestAnimationFrame(loop);
-  }
-
-  thankYou.addEventListener("click", function () {
-    thankYou.classList.toggle("frozen");
-    if (thankYou.classList.contains("frozen")) {
-      sakuraPetals = Array.from({ length: 80 }, createPetal);
-      loop();
+    
+    
+    function drawPetals() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let petal of sakuraPetals) {
+        drawPetal(petal);
+      }
     }
+    
+    function updatePetals() {
+      for (let i = sakuraPetals.length - 1; i >= 0; i--) {
+        const petal = sakuraPetals[i];
+        petal.life++;
+    
+        if (petal.growing) {
+          petal.scale += 0.01;
+          petal.opacity += 0.02;
+          if (petal.scale >= petal.maxScale) {
+            petal.growing = false;
+          }
+        } else {
+          petal.scale -= 0.005;
+          petal.opacity -= 0.01;
+        }
+    
+        if (petal.life > petal.maxLife || petal.opacity <= 0) {
+          sakuraPetals.splice(i, 1);
+        }
+      }
+    
+      // Automatikus új virágok megjelenítése
+      if (sakuraPetals.length < 25) {
+        sakuraPetals.push(createPetal());
+      }
+    }
+    
+    function sakuraLoop() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawPetals();
+      updatePetals();
+      animationId = requestAnimationFrame(sakuraLoop);
+    }
+  
+    // --- GOMB: Animáció indítása ---
+    thankYou.addEventListener("click", function () {
+      stopAnimation();
+  
+      if (currentSeason === "winter") {
+        snowflakes = Array.from({ length: 100 }, createSnowflake);
+        snowLoop();
+      } else if (currentSeason === "spring") {
+        sakuraPetals = Array.from({ length: 10 }, createPetal);
+        sakuraLoop();
+      }
+  
+      thankYou.classList.toggle("frozen");
+    });
   });
-}
-
-
-});
+  
