@@ -13,19 +13,19 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
           <div class="container d-flex align-items-center justify-content-between">
       
-            <!-- Logó és cím -->
+            <!-- Logo and title -->
             <div class="d-flex align-items-center">
               <img src="images/logo/game-chasers-logo-winter.png" alt="Game Chasers Logo" class="logo-img me-2 mt-2 season-logo" data-base="game-chasers-logo" style="height: 60px;">
               <span class="site-title mb-0">GAME CHASERS</span>
             </div>
       
-            <!-- Hamburger gomb mobilra -->
+            <!-- Hamburger button for mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
               aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
       
-            <!-- Navigációs menü -->
+            <!-- Navigation menu -->
             <div class="collapse navbar-collapse justify-content-end" id="mainNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
@@ -94,7 +94,7 @@
   <script src="js/theme-switcher.js"></script>
 
 
-  <!-- ✅ Saját foooter -->
+  <!-- ✅ Own footer -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <div class="container">
       <small>© 2025 Created: Tomáš Bari. All rights reserved.</small>
@@ -107,7 +107,7 @@
       const dropdownButton = document.getElementById('dropdownMenuButton');
       const body = document.body;
   
-      // ikonok évszakhoz társítva
+      // icons for seasons
       const seasonIcons = {
         spring: '🌸',
         summer: '☀️',
@@ -119,15 +119,15 @@
         button.addEventListener('click', () => {
           const selectedSeason = button.getAttribute('data-season');
   
-          // Töröljük az előző évszak osztályokat
+          // Remove previous season classes
           body.classList.remove('spring', 'summer', 'autumn', 'winter');
   
-          // Újat adunk hozzá
+          // Add new class
           if (selectedSeason !== 'winter') {
             body.classList.add(selectedSeason);
           }
   
-          // Dropdown ikon frissítése
+          // Dropdown icon refresh
           dropdownButton.textContent = seasonIcons[selectedSeason];
         });
       });

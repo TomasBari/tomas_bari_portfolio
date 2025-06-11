@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let currentSeason = "winter"; // Alapértelmezett évszak
+  let currentSeason = "winter"; // Base
 
   const dropbtn = document.getElementById('dropdownMenuButton');
   const seasonButtons = document.querySelectorAll('.season-option');
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.className = '';
     document.body.classList.add(season);
 
-    // Dinamikus basePath kiszámítása (ha nem az index.html-ben vagyunk, akkor kell "../")
+    // Dynamic basePath calculating (if not in index.html we need "../")
     const basePath = window.location.pathname.includes('/games/') || window.location.pathname.includes('/reviews/') || window.location.pathname.includes('/gallery') ? '../' : '';
 
     const seasonLogos = document.querySelectorAll('.season-logo');

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // --- Szavazás űrlap ---
+  // --- Comunity poll ---
   const pollForm = document.getElementById("pollForm");
   if (pollForm) {
     pollForm.addEventListener("submit", function (e) {
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Vélemények (Reviews) ---
+  // --- Reviews ---
   const reviewForm = document.getElementById("reviewForm");
   const reviewList = document.getElementById("reviewList");
 
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadReviews();
   }
 
-  // --- "Thank You" + hóesés animáció ---
+  // --- "Thank You" + snowfall animation ---
   
     const thankYou = document.getElementById("thank-you");
     const canvas = document.getElementById("snow-canvas");
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     const ctx = canvas.getContext("2d");
     let animationId = null;
-    let currentSeason = "winter"; // Alapértelmezett
+    let currentSeason = "winter"; // Base
     let snowflakes = [];
     let sakuraPetals = [];
   
@@ -116,13 +116,13 @@ document.addEventListener("DOMContentLoaded", function () {
         animationId = null;
       }
 
-      // Töröljük a canvas-t és az elemeket
+      // Remove a canvas and items
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       sakuraPetals = [];
       snowflakes = [];
     }
   
-    // --- Hó animáció ---
+    // --- Snow animation ---
     function createSnowflake() {
       return {
         x: Math.random() * canvas.width,
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
       animationId = requestAnimationFrame(snowLoop);
     }
   
-    // --- Sakura animáció ---
+    // --- Sakura animation ---
     function createPetal() {
       return {
         x: Math.random() * canvas.width,
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.save();
       ctx.translate(petal.x, petal.y);
       ctx.rotate((petal.rotation * Math.PI) / 180);
-      ctx.scale(petal.scale, petal.scale); // <-- helyes 'petal'
+      ctx.scale(petal.scale, petal.scale); 
       ctx.globalAlpha = petal.opacity;
     
       const sziromSzam = 5;
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     
-      // Automatikus új virágok megjelenítése
+      // Automatic flowers rendering
       if (sakuraPetals.length < 25) {
         sakuraPetals.push(createPetal());
       }
@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
       animationId = requestAnimationFrame(sakuraLoop);
     }
   
-    // --- GOMB: Animáció indítása ---
+    // --- Button: Start animation ---
     thankYou.addEventListener("click", function () {
       stopAnimation();
   
