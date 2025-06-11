@@ -35,3 +35,5 @@ Optimize JavaScript for better performance
 Add Database
 
 Add form for login
+
+OPEN index.html in your browser
