@@ -1,39 +1,26 @@
-Games Website
+## Projects
 
-Description
-This is a personal project. The website is built using HTML, CSS, Bootstrap, and some JavaScript. It is still a work in progress.
+### 🎮 Games Website  
+**Technologies:** HTML, CSS, JavaScript, Bootstrap (for responsiveness)
 
-Features
-Responsive design using Bootstrap
+A simple front-end website showcasing basic UI layout and styling.
 
-Basic game pages 
+---
 
-Navigation menu
+### 🛡️ Insurance App  
+**Technologies:** Java, Object-Oriented Programming (OOP)
 
-Interactive elements with JavaScript 
+This is my final project from a Java programming course at ITnetwork.  
+It demonstrates basic application structure, logic, and user interaction in Java.
 
-Technologies Used
+---
 
-HTML5
+### 🌐 Full-Stack Java Application  
+**Technologies:**  
+- **Frontend:** HTML, CSS, JavaScript, React, Bootstrap  
+- **Backend:** Java, Spring Boot, Hibernate, MVC architecture  
+- **Database:** MySQL (managed with phpMyAdmin)  
+- **Build Tool:** Maven
 
-CSS3
-
-Bootstrap 5
-
-JavaScript (basic)
-
-Future Plans
-
-Add more games
-
-Improve the UI and UX design
-
-Implement user authentication (optional)
-
-Optimize JavaScript for better performance
-
-Add Database
-
-Add form for login
-
-OPEN index.html in your browser
+This is a personal full-stack project that simulates a mini social media platform.  
+It includes REST APIs, user authentication, database integration, and a responsive UI.
