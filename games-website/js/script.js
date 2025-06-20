@@ -182,10 +182,10 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.scale(petal.scale, petal.scale); 
       ctx.globalAlpha = petal.opacity;
     
-      const sziromSzam = 5;
+      const numberOfPetal = 5;
       const radius = 20;
-      for (let i = 0; i < sziromSzam; i++) {
-        const angle = (i * 2 * Math.PI) / sziromSzam;
+      for (let i = 0; i < numberOfPetal; i++) {
+        const angle = (i * 2 * Math.PI) / numberOfPetal;
         const x = Math.cos(angle) * radius;
         const y = Math.sin(angle) * radius;
         
